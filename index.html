@@ -2,14 +2,61 @@
 <html>
 <head>
 	<title>XHR Seasonal Sale</title>
+	<link rel="stylesheet" type="text/css" href="Styles/styles.css">
 </head>
 <body>
-<h1>XHR Seasonal Sale</h1>
-<select id= "categories">
+<h1>Helana's Department Store</h1>
+<!-- 
+<form action=""> -->
+<select name="season_discountkey" id="season_discountkey">
+	<option value="0.10">WINTER 10%</option>
+	<option value="0.25">AUTUMN 25%</option>
+	<option value="0.15">SPRING 15%</option>
 </select>
-<div>
+<input type="submit" id="submit_discount">
+<!-- </form> -->
+
+<div id="inventory">
+	<li> Products:
+		<ul> Product 1
+		</ul>
+		<ul> Product 2
+		</ul>
+		<ul> Product 3
+		</ul>
+	</li>
+	<li> Name of Department:
+		<ul> Department 1
+		</ul>
+		<ul> Department 2
+		</ul>
+		<ul> Department 3
+		</ul>
+	</li>
+	<li> Price: 
+		<ul> Price 1
+		</ul>
+		<ul> Price 2
+		</ul>
+		<ul> Price 3
+		</ul>
+	</li>
 </div>
-<script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+
+<div>
+<img src="http://res.cloudinary.com/emma/image/upload/v1486097273/shopping-bag_ugm4pv.svg" alt="bag" id="grocerybag" ondrop="drop(event)" ondragover="allowDrop(event)" draggable="false">
+</div>
+<br>
+
+<div>
+	<img src="http://res.cloudinary.com/emma/image/upload/v1486097273/women_j1zitu.svg" alt="glasses" class="products_images" draggable="true" ondragstart="drag(event)" width="250" height="690">
+	<img src="http://res.cloudinary.com/emma/image/upload/v1486097273/nail-polish_ptznzj.svg" class="products_images" draggable="true" ondragstart="drag(event)" width="250" height="690">
+	<img src="http://res.cloudinary.com/emma/image/upload/v1486097273/nail-polish-1_qembkr.svg" class="products_images" draggable="true" ondragstart="drag(event)" width="250" height="690">
+	<img src="http://res.cloudinary.com/emma/image/upload/v1486097271/christmas-sock_ye6nfx.svg" class="products_images" draggable="true" ondragstart="drag(event)" width="250" height="690">
+	<img src="http://res.cloudinary.com/emma/image/upload/v1486097271/light-bulb_ggoaye.svg" class="products_images" draggable="true" ondragstart="drag(event)" width="250" height="690">
+</div>
+
+<script src="Javascripts/main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
 
