@@ -1,6 +1,11 @@
 body {
 	font-size: 30px;
 }
+
+div {
+	outline: black solid thin;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -27,14 +32,20 @@ li a:hover {
     background-color: #111111;
 }
 
-#grocerybag {
+.categoriesImg:hover {
+	outline-color: green;
+	outline-style: dashed;
+	outline-width: thin;
+	border-radius: 100px;
+}
+
+/*#grocerybag {
 	width: 500px;
 	padding: 100px;
-	margin-top: 300px;
 }
 
 .products_images {
 	width: 250px;
 	display: block;
     float: left;
-}
+}*/
