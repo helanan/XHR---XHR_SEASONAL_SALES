@@ -65,37 +65,25 @@ request.onload = function() {
 		for (i = 0; i < productsArray.products.length; i++) { 
 			if (productsArray.products[i].category_id === 1) {
    				console.log("This is an apparel item!");
-   				productsArray.products[i].category_id.class = "Apparel"
-   				products.innerHTML += "<li>" + productsArray.products[i].category_id + "</li>";
+   				products.innerHTML += "<ul>" + "<li>" + "Category: Apparel" + "<br>" + "</li>" +
+   										"<li>" + productsArray.products[i].name + "</li>" + "<br>"
+   										"<li>" + productsArray.products[i].price + "</li>" + "</ul>";
 			} else if (productsArray.products[i].category_id === 2) {
-				productsArray.products[i].category_id = "Furniture"
-   				products.innerHTML += "<li>" + productsArray.products[i].category_id + "</li>";
+   				products.innerHTML += "<ul>" + "<li>" + "Category: Furniture" + "<br>" + "</li>" +
+   										"<li>" + productsArray.products[i].name + "</li>" +
+   										"<li>" + productsArray.products[i].price + "</li>" + "</ul>";
 				console.log("This is a Furniture item");
 			} else if (productsArray.products[i].category_id === 3) {
-				productsArray.products[i].category_id = "Household"
-   				products.innerHTML += "<li>" + productsArray.products[i].category_id + "</li>";
-				console.log("This is a HouseHold item");
+   				products.innerHTML += "<ul>" + "<li>" + "Category: Household" + "<br>" + "</li>" + 
+   										"<li>" + productsArray.products[i].name + "</li>" +
+   										"<li>" + productsArray.products[i].price + "</li>" + "</ul>";
 			} else {
 				console.log("No Category selected")
 			}
 
 		}
 	
- 		// }
-
-    ///print out to DOM Products/////
-		// products.innerHTML = "<li>" + '<img src="" width=50 class=""/>' + productsArray.products[0].name + "</li>";
-  //   	products.innerHTML += "<li>" + '<img src="" width=50 class=""/>' + productsArray.products[1].name + "</li>";
-  //   	products.innerHTML += "<li>" + '<img src="" width=50 class=""/>' + productsArray.products[2].name + "</li>";
-  //   	products.innerHTML += "<li>" + '<img src="" width=50 class=""/>' + productsArray.products[3].name + "</li>";
-		// products.innerHTML += "<li>" + '<img src="" width=50 class=""/>' + productsArray.products[4].name + "</li>";
-		// products.innerHTML += "<li>" + '<img src="" width=50 class=""/>' + productsArray.products[5].name + "</li>";
-		// products.innerHTML += "<li>" + '<img src="" width=50 class=""/>' + productsArray.products[6].name + "</li>";
-		// products.innerHTML += "<li>" + '<img src="" width=50 class=""/>' + productsArray.products[7].name + "</li>";
-		// products.innerHTML += "<li>" + '<img src="" width=50 class=""/>' + productsArray.products[8].name + "</li>";
-		// products.innerHTML += "<li>" + '<img src="" width=50 class=""/>' + productsArray.products[9].name + "</li>";
-  
-
+ 		
   } else {
     // We reached our target server, but it returned an error
 
