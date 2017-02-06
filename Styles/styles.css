@@ -2,43 +2,124 @@ body {
 	font-size: 30px;
 }
 
+h1 {
+	text-align: center;
+	font-family: 'Shrikhand', cursive;
+	text-shadow: 16px 20px 1px rgba(0, 0, 0, 0.09);
+}
+
+#season_discountkey {
+	font-family: 'Farsan', cursive;
+	width: 15%;
+	height: 5%;
+	background-color: gold;
+}
+
+option {
+font-family: 'Farsan', cursive;
+}
+
 div {
-	outline: black solid thin;
+	/*outline: black solid thin;*/
+	  /*margin: -0.563em 0 0 -0.563em;*/
+}
+
+#invetory {
+	margin: 5%;
+}
+
+#products {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: 	0.563em;
+	margin-right: 	0.563em;
+	margin-bottom: 	0.563em;
+	margin-top: 	0.563em;
+
+}
+
+.overlay {
+	bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #68B0AB;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+  	transition: .5s ease;
+  	border-radius: 5px;
+}
+
+.card {
+	justify-content: center
+ 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: #FAF3DD;
+    margin: 	0.563em;
+    width: 30%
+}
+
+.card:hover .overlay{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    height: 100%;
+    width: 100%;
+    margin: 5px;
+
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: yellow;
+/*    overflow: hidden;*/
+    margin-left: -45px;
 }
 
 li {
 	list-style-type: none;
-    float: left;
-    padding: 5px;
 }
 
 li a {
-    display: block;
     color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
+/*    text-decoration: none;*/
 }
 
 li a:hover {
     background-color: #111111;
 }
 
-.categoriesImg:hover {
+h4 {
+	font-family: 'Shrikhand', cursive;
+	color: #4A7C59;
+	text-align: center;
+
+}
+
+h4:hover {
+	color: #68B0AB;
+
+}
+
+.image {
+    height: auto;
+}
+
+.nav:hover {
 	outline-color: green;
 	outline-style: dashed;
 	outline-width: thin;
 	border-radius: 100px;
 }
 
+img {
+	margin-left: 24%;
+	margin-bottom: 15%;
+}
+
+.nav {
+	margin: 	0.563em;
+}
 
 
 /*#grocerybag {
