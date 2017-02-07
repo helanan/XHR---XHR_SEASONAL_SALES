@@ -20,12 +20,19 @@ font-family: 'Farsan', cursive;
 }
 
 div {
-	/*outline: black solid thin;*/
+/*	outline: black solid thin;*/
 	  /*margin: -0.563em 0 0 -0.563em;*/
+	  margin: 0px 0px 0px 5px;
 }
 
-#invetory {
-	margin: 5%;
+#inventory {
+	margin: 2%;
+	display: inline-block;
+	font-family: 'Poiret One', cursive;
+}
+
+#household {
+	height: 20px;
 }
 
 #products {
@@ -45,10 +52,8 @@ div {
     right: 0;
     background-color: #68B0AB;
     overflow: hidden;
-    width: 100%;
     height: 0;
   	transition: .5s ease;
-  	border-radius: 5px;
 }
 
 .card {
@@ -72,12 +77,15 @@ div {
 
 ul {
     list-style-type: none;
-/*    overflow: hidden;*/
+    overflow: hidden;
     margin-left: -45px;
 }
 
 li {
 	list-style-type: none;
+	margin: 10px 10px 10px 10px;
+	text-align: center;
+	font-family: 'Poiret One', cursive;
 }
 
 li a {
@@ -103,7 +111,14 @@ h4:hover {
 
 .image {
     height: auto;
+    text-align: justify;
 }
+
+img.nav {
+	margin: 5px 10px -12px 10px;
+	text-align: justify;
+}
+
 
 .nav:hover {
 	outline-color: green;
@@ -113,12 +128,15 @@ h4:hover {
 }
 
 img {
-	margin-left: 24%;
-	margin-bottom: 15%;
+/*	margin-left: 31%;*/
+	margin-bottom: 10%;
+	margin-left: 31%;
 }
 
-.nav {
-	margin: 	0.563em;
+/*//css images//*/
+
+#canvas {
+
 }
 
 
