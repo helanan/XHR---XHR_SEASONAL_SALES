@@ -10,13 +10,13 @@ var discountKey = document.getElementById("season_discountkey");
 console.log("discountKey.value", discountKey.value);
 
  if (discountKey.value === 0.10) {
- 		inventory.innerHTML = "<li>" + discountKey.value + "</li>";
+ 		inventory.innerHTML = '<li>' + discountKey.value + '</li>';
  		console.log("inventory.innerHTML", inventory.innerHTML);
  	} else if (discountKey.value[1] === 0.25) { 
- 			inventory.innerHTML = "<li>" + discountKey.value + "</li>";
+ 			inventory.innerHTML = '<li>' + discountKey.value + '</li>';
  			console.log("inventory.innerHTML", inventory.innerHTML);
  	} else if (discountKey.value === 0.15) {
- 			inventory.innerHTML = "<li>" + discountKey.value + "</li>";
+ 			inventory.innerHTML = '<li>' + discountKey.value + '</li>';
  	} else {
 		console.log("Please Select a Discount Code")
 	}
@@ -33,9 +33,9 @@ request2.onload = function() {
     console.log("categoriesArray", categoriesArray);
 
     ///print out to DOM Categories/////
-    	inventory.innerHTML = '<li id="apparel">' + '<img src="http://res.cloudinary.com/emma/image/upload/v1486151916/garment_sr1ng1.svg" width=50 class="categoriesImg"/>' + categoriesArray.categories[0].name + "</li>";
-    	inventory.innerHTML += '<li id="furniture">' + '<img src="http://res.cloudinary.com/emma/image/upload/v1486151916/bed_rdkhod.svg" width=50 class="categoriesImg"/>' + categoriesArray.categories[1].name + "</li>";
-    	inventory.innerHTML += '<li id="household">' + '<img src="http://res.cloudinary.com/emma/image/upload/v1486151916/technology_bkoakl.svg" width=50 class="categoriesImg"/>' + categoriesArray.categories[2].name + "</li>";
+    	inventory.innerHTML =  '<img class="nav" src="http://res.cloudinary.com/emma/image/upload/v1486151916/garment_sr1ng1.svg" width=50 class="categoriesImg"/>' + categoriesArray.categories[0].name;
+    	inventory.innerHTML += '<img class="nav" src="http://res.cloudinary.com/emma/image/upload/v1486151916/bed_rdkhod.svg" width=50 class="categoriesImg"/>' + categoriesArray.categories[1].name;
+    	inventory.innerHTML += '<img class="nav" src="http://res.cloudinary.com/emma/image/upload/v1486151916/technology_bkoakl.svg" width=50 class="categoriesImg"/>' + categoriesArray.categories[2].name;
   } else {
     // We reached our target server, but it returned an error
 
@@ -65,24 +65,34 @@ request.onload = function() {
 		for (i = 0; i < productsArray.products.length; i++) { 
 			if (productsArray.products[i].category_id === 1) {
    				console.log("This is an apparel item!");
-   				products.innerHTML += "<ul>" + "<li>" + "Category: Apparel" + "<br>" + "</li>" +
-   										"<li>" + productsArray.products[i].name + "</li>" + "<br>"
-   										"<li>" + productsArray.products[i].price + "</li>" + "</ul>";
+   				products.innerHTML += 	'<div class="card">' + 
+   										'<ul>' + '<h4>' + productsArray.products[i].name + '</h4>' +
+   										'<li>' + '<div class="image">' + productsArray.products[i].image + '</div>'+'</li>' + 
+   										'<div class="overlay">' +
+   										'<li>' + 'Department: Apparel' + '</li>' +
+   										'<li>' + 'Price: $' + productsArray.products[i].price + '</li>' + '</ul>' + '</div>' + '</div>';
 			} else if (productsArray.products[i].category_id === 2) {
-   				products.innerHTML += "<ul>" + "<li>" + "Category: Furniture" + "<br>" + "</li>" +
-   										"<li>" + productsArray.products[i].name + "</li>" +
-   										"<li>" + productsArray.products[i].price + "</li>" + "</ul>";
+   				products.innerHTML += 	'<div class="card">' +
+   										'<ul>' + '<h4>' + productsArray.products[i].name + '</h4>' +
+   										'<li>' + '<div class="image">' + productsArray.products[i].image + '</div>' + '</li>' +
+   										'<div class="overlay">' +
+   										'<li>' + 'Department: Furniture' + '</li>' +
+   										'<li>' + 'Price: $' + productsArray.products[i].price + '</li>' + '</ul>' + '</div>';
 				console.log("This is a Furniture item");
 			} else if (productsArray.products[i].category_id === 3) {
-   				products.innerHTML += "<ul>" + "<li>" + "Category: Household" + "<br>" + "</li>" + 
-   										"<li>" + productsArray.products[i].name + "</li>" +
-   										"<li>" + productsArray.products[i].price + "</li>" + "</ul>";
+   				products.innerHTML += 	'<div class="card">' +
+   										'<ul>' + '<h4>' + productsArray.products[i].name + '</h4>' +
+   										'<li class="image">' + productsArray.products[i].image + '</li>' + 
+   										'<div class="overlay">' +
+   										'<li>' + 'Department: Household' + '</li>' +
+   										'<li>' + 'Price: $' + productsArray.products[i].price + '</li>' + '</ul>' + '</div>';
 			} else {
 				console.log("No Category selected")
 			}
 
 		}
-	
+	return productsArray.products[i].category_id;
+	console.log()
  		
   } else {
     // We reached our target server, but it returned an error
@@ -158,17 +168,62 @@ request.send();
 
 // trying to implement a fun drag and drop element will go back to this if have time
 
-// function allowDrop(ev) {
-//     ev.preventDefault();
-// }
+var canvas;
+var ctx;
+var x = 75;
+var y = 50;
+var WIDTH = 400;
+var HEIGHT = 300;
+var dragok = false;
 
-// function drag(ev) {
-//     ev.dataTransfer.setData("text", ev.target.id);
-// }
+function rect(x,y,w,h) {
+ ctx.beginPath();
+ ctx.rect(x,y,w,h);
+ ctx.closePath();
+ ctx.fill();
+}
 
+function clear() {
+ ctx.clearRect(0, 0, WIDTH, HEIGHT);
+}
 
-// function drop(ev) {
-//     ev.preventDefault();
-//     var data = ev.dataTransfer.getData("text");
-//     ev.target.appendChild(document.getElementById(data));
-// }
+function init() {
+ canvas = document.getElementById("canvas");
+ ctx = canvas.getContext("2d");
+ return setInterval(draw, 10);
+}
+
+function draw() {
+ clear();
+ ctx.fillStyle = "#FAF7F8";
+ rect(0,0,WIDTH,HEIGHT);
+ ctx.fillStyle = "#444444";
+ rect(x - 15, y - 15, 30, 30);
+}
+
+function myMove(e){
+ if (dragok){
+  x = e.pageX - canvas.offsetLeft;
+  y = e.pageY - canvas.offsetTop;
+ }
+}
+
+function myDown(e){
+ if (e.pageX < x + 15 + canvas.offsetLeft && e.pageX > x - 15 +
+ canvas.offsetLeft && e.pageY < y + 15 + canvas.offsetTop &&
+ e.pageY > y -15 + canvas.offsetTop){
+  x = e.pageX - canvas.offsetLeft;
+  y = e.pageY - canvas.offsetTop;
+  dragok = true;
+  canvas.onmousemove = myMove;
+ }
+}
+
+function myUp(){
+ dragok = false;
+ canvas.onmousemove = null;
+}
+
+init();
+canvas.onmousedown = myDown;
+canvas.onmouseup = myUp;

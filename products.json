@@ -2,63 +2,73 @@
   "products": [
     {
       "id": 0,
-      "name": "Kids socks",
+      "name": "Ladies Gloves",
       "price": 4.99,
-      "category_id": 1
+      "category_id": 1,
+      "image": "<img src='http://res.cloudinary.com/emma/image/upload/v1486408288/leather-gloves_wh8ylm.svg' width=200 />"
     },
     {
       "id": 1,
-      "name": "Mens socks",
+      "name": "Boxers",
       "price": 6.99,
-      "category_id": 1
+      "category_id": 1,
+      "image": "<img src='http://res.cloudinary.com/emma/image/upload/v1486408283/boxer_jthhnn.svg' width=200 />"
     },
     {
       "id": 2,
-      "name": "Ladies socks",
+      "name": "Necklace",
       "price": 7.99,
-      "category_id": 1
+      "category_id": 1,
+      "image": "<img src='http://res.cloudinary.com/emma/image/upload/v1486408290/luxury_ez4kqw.svg' width=200 />"
     },
     {
       "id": 3,
-      "name": "Foot stool",
+      "name": "Pillow",
       "price": 14.99,
-      "category_id": 2
+      "category_id": 2,
+      "image": "<img src='http://res.cloudinary.com/emma/image/upload/v1486408293/pillow-1_upryol.svg' width=200 />"
     },
     {
       "id": 4,
-      "name": "Lava lamp",
+      "name": "Lamp",
       "price": 9.99,
-      "category_id": 2
+      "category_id": 2,
+      "image": "<img src='http://res.cloudinary.com/emma/image/upload/v1486408294/studying_yuzr8z.svg' width=200 />"
     },
     {
       "id": 5,
-      "name": "Sunglasses",
+      "name": "Waste Bin",
       "price": 64.99,
-      "category_id": 2
+      "category_id": 2,
+      "image": "<img src='http://res.cloudinary.com/emma/image/upload/v1486408283/basket_wdnl9k.svg' width=200 />"
     },
     {
       "id": 6,
-      "name": "Air filter",
+      "name": "Candle",
       "price": 6.99,
-      "category_id": 3
+      "category_id": 3,
+      "image": "<img src='http://res.cloudinary.com/emma/image/upload/v1486408289/light-2_ovsdon.svg' width=200 />"
     },
     {
       "id": 7,
-      "name": "Surge protector",
+      "name": "Broom",
       "price": 8.99,
-      "category_id": 3
+      "category_id": 3,
+      "image": "<img src='http://res.cloudinary.com/emma/image/upload/v1486408285/broom_ivps4q.svg' width=200 />"
     },
     {
       "id": 8,
-      "name": "Plastic storage bin",
+      "name": "Plastic Storage Bin",
       "price": 3.99,
-      "category_id": 3
+      "category_id": 3,
+      "image": "<img src='http://res.cloudinary.com/emma/image/upload/v1486408283/box_gutot5.svg' width=200 />"
     },
     {
       "id": 9,
-      "name": "Light bulb",
+      "name": "Light Bulb",
       "price": 1.99,
-      "category_id": 3
+      "category_id": 3,
+      "image": "<img src='http://res.cloudinary.com/emma/image/upload/v1486408287/interface_mptakx.svg' width=200 />"
     }
   ]
 }
